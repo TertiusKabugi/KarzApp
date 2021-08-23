@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:animateLayoutChanges="true"
+    android:background="@color/teal_200"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="LoginActivity">
+
+    <RelativeLayout
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@color/black" />
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/rellay1"
+            android:layout_below="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:id="@+id/tvLogin"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:text="Log In"
+                android:textSize="30dp"
+                tools:text="Log In" />
+
+            <LinearLayout
+                android:id="@+id/linley"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLogin"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username"
+                    android:textAllCaps="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:background="@drawable/et_bg"
+                    android:ems="20"
+                    android:inputType="textEmailAddress"
+                    android:autofillHints="me@gmail.com" />
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:textAllCaps="true"
+                    android:id="@+id/tvPass"
+                    android:layout_width="118dp"
+                    android:layout_height="31dp"
+                    android:textSize="20sp"
+                    android:text="@string/password" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/edtPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:background="@drawable/et_bg"
+                    android:ems="20"
+                    android:inputType="textPersonName"
+                    android:password="true"
+                    android:autofillHints="PASSWORD" />
+
+            </LinearLayout>
+
+            <Button
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:paddingRight="70sp"
+                android:paddingLeft="70sp"
+                android:id="@+id/btnLogIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:background="@color/transparent"
+                android:layout_below="@id/linley"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/rellay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/btnSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:background="@color/transparent"
+            android:text="@string/sign_up"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/btnForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent"
+            android:fontFamily="sans-serif"
+            android:text="@string/forgot_password"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

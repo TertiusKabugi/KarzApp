@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "196986998074",
+    "project_id": "karz-55b3f",
+    "storage_bucket": "karz-55b3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196986998074:android:a5320791d2ada5954a9403",
+        "android_client_info": {
+          "package_name": "com.kabugi.karz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196986998074-lvk9djmqidve8jlkjbqftp088o91vufr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAdAHGHq4KqVAJqAIUpBIYfkUDf7sM3lc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196986998074-lvk9djmqidve8jlkjbqftp088o91vufr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
