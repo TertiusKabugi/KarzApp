@@ -22,10 +22,10 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentTop="true"
-            app:srcCompat="@color/black" />
+            app:srcCompat="@drawable/logo" />
 
         <RelativeLayout
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/rellay1"
             android:layout_below="@+id/imageView2"
             android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:visibility="visible"
+        android:visibility="invisible"
         android:id="@+id/rellay2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

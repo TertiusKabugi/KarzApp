@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.kabugi.karz.ui.gallery.GalleryFragment"
+        android:name="com.kabugi.karz.ui.addVehicle.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
