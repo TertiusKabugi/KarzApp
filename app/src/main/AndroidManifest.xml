@@ -3,6 +3,8 @@
     package="com.kabugi.karz">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,8 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Karz">
-        <activity android:name=".ui.profile.ProfileActivity"></activity>
-        <activity android:name=".RegistrationActivity" /> <!-- <activity android:name=".LoginActivity" /> -->
+        <activity android:name=".ui.profile.ProfileActivity">
+        </activity>
+        <activity android:name=".RegistrationActivity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,16 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserProfile" /> <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN" /> -->
-        <!--  -->
-        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-        <!-- </intent-filter> -->
+        <activity android:name=".UserProfile" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".ui.home.HomeActivity" />
-        <activity android:name=".ui.gallery.GalleryActivity" />
+        <activity android:name=".ui.addVehicle.AddActivity" />
         <activity android:name=".MainActivity" />
     </application>
 
