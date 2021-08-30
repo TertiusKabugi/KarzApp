@@ -33,7 +33,7 @@ public class UserProfile extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText profileFullName,profileEmail,profilePhone;
     ImageView profileImageView;
-    Button saveBtn, changeProfile, resetPassword, logOut;
+    Button saveBtn, changeProfile, resetPassword, logOut, watch;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     FirebaseUser user;
@@ -62,6 +62,14 @@ public class UserProfile extends AppCompatActivity {
         changeProfile = findViewById(R.id.changeProfile);
         resetPassword = findViewById(R.id.resetPasswordLocal);
         logOut = findViewById(R.id.btnLogOut);
+        watch = findViewById(R.id.btn);
+
+        watch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Clicked.", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {

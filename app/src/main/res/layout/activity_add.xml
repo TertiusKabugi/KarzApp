@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.addVehicle.AddActivity">
 
   <ImageView
-      android:id="@+id/displayImageView"
+      android:id="@+id/imgView"
       android:layout_width="300dp"
       android:layout_height="300dp"
       app:layout_constraintBottom_toBottomOf="parent"
@@ -18,24 +18,24 @@
       app:srcCompat="@drawable/side_nav_bar" />
 
   <Button
-      android:id="@+id/cameraBtn"
+      android:id="@+id/btnChoose"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="40dp"
-      android:text="Camera"
+      android:layout_marginTop="48dp"
+      android:text="Choose Image"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.33"
+      app:layout_constraintHorizontal_bias="0.175"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/displayImageView" />
+      app:layout_constraintTop_toBottomOf="@+id/imgView" />
 
   <Button
-      android:id="@+id/galleryBtn"
+      android:id="@+id/btnUpload"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
-      android:text="Gallery"
-      app:layout_constraintBottom_toBottomOf="@+id/cameraBtn"
-      app:layout_constraintStart_toEndOf="@+id/cameraBtn"
-      app:layout_constraintTop_toTopOf="@+id/cameraBtn"
+      android:text="Upload Image"
+      app:layout_constraintBottom_toBottomOf="@+id/btnChoose"
+      app:layout_constraintStart_toEndOf="@+id/btnChoose"
+      app:layout_constraintTop_toTopOf="@+id/btnChoose"
       android:layout_marginLeft="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

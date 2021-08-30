@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mEmail = findViewById(R.id.edtEmail);
         mPassword = findViewById(R.id.edtPass);
-        progressBar = findViewById(R.id.progressBar);
+//        progressBar = findViewById(R.id.progressBar);
         firebaseAuth = FirebaseAuth.getInstance();
         mLoginBtn = findViewById(R.id.btnLogIn);
         mSignUp = findViewById(R.id.btnSignup);
@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                     mPassword.setError("Password Must be >= 6 Characters");
                     return;
                 }
-                progressBar.setVisibility(View.VISIBLE);
+//                progressBar.setVisibility(View.VISIBLE);
 
                 // authenticate the user
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }else {
                             Toast.makeText(LoginActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
+//                            progressBar.setVisibility(View.GONE);
                         }
                     }
                 });
