@@ -24,6 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +34,7 @@ public class UserProfile extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText profileFullName,profileEmail,profilePhone;
     ImageView profileImageView;
-    Button saveBtn, changeProfile, resetPassword, logOut, watch;
+    Button saveBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     FirebaseUser user;
@@ -54,28 +55,17 @@ public class UserProfile extends AppCompatActivity {
         user = fAuth.getCurrentUser();
         storageReference = FirebaseStorage.getInstance().getReference();
 
-//        profileFullName = findViewById(R.id.profileFullName);
-//        profileEmail = findViewById(R.id.profileEmailAddress);
-//        profilePhone = findViewById(R.id.profilePhoneNo);
-//        profileImageView = findViewById(R.id.profileImageView);
-//        saveBtn = findViewById(R.id.saveProfileInfo);
-        changeProfile = findViewById(R.id.changeProfile);
-        resetPassword = findViewById(R.id.resetPasswordLocal);
-        logOut = findViewById(R.id.btnLogOut);
-        watch = findViewById(R.id.btn);
-
-        watch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Clicked.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        profileFullName = findViewById(R.id.profileFullName);
+        profileEmail = findViewById(R.id.profileEmailAddress);
+        profilePhone = findViewById(R.id.profilePhoneNo);
+        profileImageView = findViewById(R.id.profileImageView);
+        saveBtn = findViewById(R.id.saveProfileInfo);
 
         StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                //Picasso.get().load(uri).into(profileImageView);
+                Picasso.get().load(uri).into(profileImageView);
             }
         });
 
@@ -159,7 +149,7 @@ public class UserProfile extends AppCompatActivity {
                 fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                        //Picasso.get().load(uri).into(profileImageView);
+                        Picasso.get().load(uri).into(profileImageView);
                     }
                 });
             }
@@ -170,8 +160,5 @@ public class UserProfile extends AppCompatActivity {
             }
         });
 
-    }
-
-    public void logout(View view) {
     }
 }

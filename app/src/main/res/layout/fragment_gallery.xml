@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="0dp"
+    android:background="@color/purple_200"
     tools:context=".ui.addVehicle.AddActivity">
 
 <!--    <TextView-->
@@ -76,20 +77,22 @@
 <!--            android:phoneNumber="true"/>-->
 
         <EditText
-            android:id="@+id/manufacturer"
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="248dp"
+            android:layout_marginBottom="115dp"
             android:hint="Name" />
 
         <EditText
-            android:id="@+id/fuel"
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="132dp"
+            android:layout_marginBottom="65dp"
             android:hint="Description" />
 
         <RelativeLayout
